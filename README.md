@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+# ClimaAgora - Aplicativo Móvel de Clima
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## Estrutura de Pastas Atualizada
+```
+clima-agora/
+│
+├── assets/
+│   ├── background.jpg          # Imagem de fundo da tela inicial
+│   └── weather-background.jpg  # Imagem de fundo da tela de clima
+│
+├── hooks/
+│   └── useWeatherData.js       # Hook personalizado para buscar dados de clima
+│
+├── screens/
+│   ├── HomeScreen.js           # Tela inicial
+│   └── WeatherScreen.js        # Tela de clima
+│
+├── App.js                      # Componente raiz e configuração de navegação
+│
+└── README.md                   # Documentação do projeto
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Principais Mudanças
+- Renomeado diretório `telas/` para `screens/`
+- Renomeados componentes de tela:
+  - `TelaInicial.js` → `HomeScreen.js`
+  - `TelaClima.js` → `WeatherScreen.js`
+- Atualizada navegação no `App.js`
+- Mantidas as mesmas funcionalidades do projeto anterior
 
-## Learn more
+## Recursos
+- Tela inicial com saudação dinâmica
+- Exibição de dados climáticos
+- Navegação entre telas
+- Integração com API de clima
 
-To learn more about developing your project with Expo, look at the following resources:
+## Instalação
+1. Clone o repositório
+2. Instale as dependências:
+   ```
+   npm install
+   ```
+3. Configure sua chave de API no hook `useWeatherData.js`
+4. Inicie o projeto:
+   ```
+   expo start
+   ```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Tecnologias
+- React Native
+- Expo
+- React Navigation
+- OpenWeatherMap API
